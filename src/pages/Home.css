@@ -1,0 +1,55 @@
+.popup{
+    border: solid gray;
+    border-radius: 20px;
+    height: 700px;
+    width: 300px;
+    position: relative; /* Voeg deze regel toe om de poi-content absoluut te positioneren */
+    overflow: hidden; /* Voeg overflow toe zodat de content buiten de popup verborgen blijft */
+}
+
+/* Animatiestijlen voor de CSSTransition */
+.poi-content {
+    position: relative;
+  }
+/* Animatie naar rechts */
+.right-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  .right-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms ease-in-out ;
+  }
+  
+  .right-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .right-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 500ms ease-in-out;
+  }
+  
+  /* Animatie naar links */
+  .left-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .left-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .left-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .left-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 500ms ease-in-out;
+  }
+  
