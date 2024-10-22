@@ -1,0 +1,24 @@
+ 
+ 
+ 
+ 
+ /* Voor telefoons in portretmodus */
+  @media (max-width: 425px) {
+
+  }
+  @media (max-width: 375px) {
+  
+  }
+  @media (max-width: 320px) {
+  
+  }
+  
+  /* Voor laptops en desktops */
+  @media (max-width: 1280px) {
+    /* Stijlen voor grotere schermen (large) */
+  }
+  
+  /* Voor extra grote schermen */
+  @media (min-width: 1281px) {
+    /* Stijlen voor zeer grote schermen (extra large) */
+  }

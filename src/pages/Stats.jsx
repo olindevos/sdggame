@@ -1,11 +1,11 @@
 import Header from '../components/header'
-import './Contact.css'
+import './Stats.css'
 
-export default function Contact (){
+export default function Stats (){
     return(
         <>
            <Header />
-           <div>Contact Page</div>
+           <div>Stats Page</div>
         </>
     )
 }

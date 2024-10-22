@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Header from '../components/header';
-import './Home.css'; // Zorg ervoor dat je de bijbehorende CSS file hebt toegevoegd.
+import './Home.css'; // Vergeet niet om je bijbehorende CSS toe te voegen
 
 export default function Home() {
   // State om de popup te tonen of te verbergen
@@ -47,21 +47,24 @@ export default function Home() {
                 timeout={500}
                 classNames={direction} // Gebruikt de direction ('left' of 'right') voor animatie
               >
-                <div className="poi-content">
-                  <h2>Point of Interest {currentPOI}</h2>
-                  <p>Hier kun je alle informatie over POI {currentPOI} tonen.</p>
+                <div className="poi-content"> 
+                  <div className='poi-content-title'>
+                    {/* Knoppen voor navigeren naar de vorige en volgende POI */}
+                    <div className="navigation-buttons">
+                      <button onClick={previousPOI} className="nav-button">&#8592;</button> {/* Pijl naar links */}
+                      <h>POI {currentPOI}</h>
+                      <button onClick={nextPOI} className="nav-button">&#8594;</button>   {/* Pijl naar rechts */}
+                    </div>
+                  </div>
+                  <hr className='PCThr'></hr>
+                  <div className='popup-info'></div>
                 </div>
               </CSSTransition>
             </SwitchTransition>
 
             {/* Sluit de popup */}
-            <button onClick={togglePopup} className="close-button">Close</button>
-
-            {/* Knoppen voor navigeren naar de vorige en volgende POI */}
-            <div className="navigation-buttons">
-              <button onClick={previousPOI} className="nav-button">&#8592;</button> {/* Pijl naar links */}
-              <button onClick={nextPOI} className="nav-button">&#8594;</button>   {/* Pijl naar rechts */}
-            </div>
+            <button onClick={togglePopup} className="close-button">X</button>
+          
           </div>
         </div>
       )}

@@ -1,0 +1,15 @@
+.current-poi { 
+  background-color: #f0f0f0; 
+  padding: 20px; 
+  border-radius: 10px; 
+  margin: 20px auto; 
+  width: 80%; 
+  text-align: center; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  } 
+  
+.current-poi h2 { 
+  color: #007BFF; 
+  font-size: 1.75em; 
+  margin: 0; 
+  } 

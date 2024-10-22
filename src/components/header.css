@@ -1,0 +1,39 @@
+.NavBar{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    background-color: rgba(240, 240, 240, 0.5);
+}
+
+.InnerNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    width: 200px;
+    
+}
+.Logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+ /* Voor telefoons in portretmodus */
+ @media (max-width: 425px) {
+ }
+ @media (max-width: 375px) {
+ }
+ @media (max-width: 320px) {
+ }
+ 
+ /* Voor laptops en desktops */
+ @media (max-width: 1280px) {
+   /* Stijlen voor grotere schermen (large) */
+ }
+ 
+ /* Voor extra grote schermen */
+ @media (min-width: 1281px) {
+   /* Stijlen voor zeer grote schermen (extra large) */
+ }
