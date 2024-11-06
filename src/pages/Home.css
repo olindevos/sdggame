@@ -1,15 +1,65 @@
 .popup{
-    border: solid gray;
-    border-radius: 20px;
-    height: 700px;
-    width: 300px;
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: 15px;
+    height: 350px;
+    width: 350px;
     position: relative; /* Voeg deze regel toe om de poi-content absoluut te positioneren */
     overflow: hidden; /* Voeg overflow toe zodat de content buiten de popup verborgen blijft */
+    position: fixed; /* Zorgt ervoor dat de popup vast blijft staan, ook bij scrollen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Gebruik flexbox om te centreren */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    z-index: 1000; /* Zorg ervoor dat de popup boven andere elementen verschijnt */
 }
-
+.popup-inner {
+  position: relative;
+  width: 300px; /* Breedte van de popup */
+  height: 300px;
+  max-width: 600px; /* Max-breedte van de popup */
+  padding: 20px;
+  background-color: white; /* Witte achtergrond voor de popup */
+  border-radius: 10px; /* Ronde hoeken */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.popup-info{
+  height: 200px;
+}
 /* Animatiestijlen voor de CSSTransition */
 .poi-content {
     position: relative;
+  }
+  .poi-content-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navigation-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+    height: 6vh;
+
+
+  }
+  .nav-button{
+    background: transparent;
+    border: none;
+    font-size: 30px;
+  }
+  .PCThr{
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin-top: 0px;
   }
 /* Animatie naar rechts */
 .right-enter {
@@ -52,4 +102,54 @@
     opacity: 0;
     transition: transform 500ms ease-in-out;
   }
+  .close-button {
+    border: none;
+    font-size: 30px;
+    background-color: transparent;
+  }
   
+  /* Voor telefoons in portretmodus */
+@media (max-width: 425px) {
+ 
+}
+@media (max-width: 375px) {
+  .popup-inner {
+    width: 275px; /* Breedte van de popup */
+    height: 275px;
+  }
+  .popup-info{
+    height: 180px;
+  }
+}
+@media (max-width: 320px) {
+  .popup-inner {
+    width: 225px; /* Breedte van de popup */
+    height: 250px;
+  }
+  .popup-info{
+    height: 160px;
+  }
+}
+
+/* Voor laptops en desktops */
+@media (min-width: 1280px) {
+ .popup{
+  background-color: rgba(240, 240, 240, 0);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 105vh;
+ }
+ .popup-inner{
+  margin-right: 20px;
+  height: 700px;
+ }
+ .popup-info{
+  height: 600px;
+}
+}
+
+/* Voor extra grote schermen */
+@media (min-width: 1281px) {
+  /* Stijlen voor zeer grote schermen (extra large) */
+}

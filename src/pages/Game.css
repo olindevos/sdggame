@@ -1,0 +1,95 @@
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 130px;
+  }
+  
+  h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-weight: 50;
+  }
+  
+  .answers-list {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .answer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .question-info {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .question-image-placeholder {
+    width: 90px;
+    height: 75px;
+    background-color: #ccc;
+  }
+  
+  .answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .option {
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    width: 125px;
+
+  }
+  
+  .correct {
+    background-color: #4caf50; /* Groen voor juiste antwoord */
+  }
+  
+  .incorrect {
+    background-color: #f44336; /* Rood voor foutief gekozen antwoord */
+  }
+  
+  .neutral {
+    background-color: #ccc; /* Neutrale kleur voor overige opties */
+  }
+  
+  .home-buttonBackground{
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+
+  }
+  .home-button {
+    width: 300px;
+    height: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  

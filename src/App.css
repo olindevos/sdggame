@@ -1,4 +1,24 @@
 
 .home {
-    font-size: 30px;
+font-size: 30px;
 }
+a {
+text-decoration: none;
+color: black ;
+}
+
+.H11 { 
+text-align: center;       
+font-family: Arial, sans-serif;     
+background-color: #f7f7f7; 
+padding: 20px; 
+} 
+h1 {       
+color: #4CAF50;       
+margin-bottom: 20px;
+} 
+h2 { 
+color: #333;       
+font-size: 1.5em;       
+margin-top: 20px;       
+} 
