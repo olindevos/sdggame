@@ -1,11 +1,12 @@
 import Header from '../components/header'
 import './Stats.css'
+import Stat from '../components/stat'
 
 export default function Stats (){
     return(
         <>
            <Header />
-           <div>Stats Page</div>
+           <Stat /><Stat /><Stat /><Stat /><Stat />
         </>
     )
 }

@@ -6,10 +6,9 @@ import './App.css'
 import NoPage from './pages/NoPage'
 import React from 'react'; 
 import './App.css'; 
-import CurrentPOI from './components/CurrentPOI'; 
-import ActionBlock from './components/ActionBlock'; 
 
-function App() {
+
+export default function App() {
  return(
     <>
     <div className='home'>
@@ -23,14 +22,8 @@ function App() {
         </Routes>
         </BrowserRouter>
     </div>
-    <div className="H11"> 
-
-    <h1>POI Spel</h1> 
-         <CurrentPOI />   {/* Laat de POI zien */} 
-         <ActionBlock />   {/* acties om spel te stoppen*/} 
-    </div> 
+ 
     </>
  )
 }
-
-export default App;
+;

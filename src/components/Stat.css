@@ -1,0 +1,92 @@
+.statblock {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.StatMain {
+    width: 375px;
+    display: flex;
+    align-items: center;
+}
+
+.Statcontain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.POIpic {
+    border: solid gray;
+    background-color: gray;
+    height: 75px;
+    width: 75px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.POIinfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.POIinfoName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.POIinfoTxt {
+    font-size: 15px;
+}
+
+.POIinfoArr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+hr {
+    width: 375px;
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin-top: 10;
+    transition: margin-top 0.3s ease;
+}
+
+.extraInfo {
+    width: 375px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    position: relative;
+}
+
+.extraInfo.show {
+    max-height: 200px; /* Pas aan naar de benodigde hoogte */
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.extraInfo p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.placeholderChart {
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+}

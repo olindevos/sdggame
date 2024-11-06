@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div>Home Page</div>
+
       <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
 
       {/* Toon de popup als showPopup true is */}
@@ -52,8 +52,8 @@ export default function Home() {
                     {/* Knoppen voor navigeren naar de vorige en volgende POI */}
                     <div className="navigation-buttons">
                       <button onClick={previousPOI} className="nav-button">&#8592;</button> {/* Pijl naar links */}
-                      <h>POI {currentPOI}</h>
-                      <button onClick={nextPOI} className="nav-button">&#8594;</button>   {/* Pijl naar rechts */}
+                      <h2>POI {currentPOI}</h2> {/* Gebruik een geldige heading-tag zoals h2 */}
+                      <button onClick={nextPOI} className="nav-button">&#8594;</button> {/* Pijl naar rechts */}
                     </div>
                   </div>
                   <hr className='PCThr'></hr>

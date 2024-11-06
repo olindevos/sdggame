@@ -1,39 +1,86 @@
 .NavBar{
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    background-color: rgba(240, 240, 240, 0.5);
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
 .InnerNav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 15px;
-    width: 200px;
-    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  width: 200px;
 }
+
 .Logo {
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
- /* Voor telefoons in portretmodus */
- @media (max-width: 425px) {
- }
- @media (max-width: 375px) {
- }
- @media (max-width: 320px) {
- }
- 
- /* Voor laptops en desktops */
- @media (max-width: 1280px) {
-   /* Stijlen voor grotere schermen (large) */
- }
- 
- /* Voor extra grote schermen */
- @media (min-width: 1281px) {
-   /* Stijlen voor zeer grote schermen (extra large) */
- }
+
+.BurgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+.BurgerMenu div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+/* Hide the navigation links initially for mobile */
+.InnerNav {
+  display: none;
+}
+
+/* For phones in portrait mode */
+@media (max-width: 425px) {
+  .BurgerMenu {
+      display: flex;
+  }
+
+  .NavBar {
+      justify-content: space-between;
+  }
+
+  .InnerNav.active {
+      display: flex;
+      position: absolute;
+      top: 55px;
+      left: 205px;
+      width: 50vw;
+      background-color: rgba(240, 240, 240, 0.9);
+      flex-direction: column;
+      z-index: 100;
+  }
+
+  .InnerNav a {
+      padding: 8px;
+      display: flex;
+
+  }
+}
+@media (max-width: 375px) {
+  .InnerNav.active {
+      top: 55px;
+      left: 180px;
+  }
+}
+@media (max-width: 320px) {
+  .InnerNav.active {
+      top: 55px;
+      left: 155px;
+  }
+}
+/* Larger screens, default display */
+@media (min-width: 426px) {
+  .InnerNav {
+      display: flex;
+  }
+}
