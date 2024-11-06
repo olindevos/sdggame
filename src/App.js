@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import About from './pages/About'
 import './App.css';
 import NoPage from './pages/NoPage';
+import FirstPage from './pages/FirstPage';
 
 function App() {
  return(
@@ -14,6 +15,7 @@ function App() {
             <Route path='/home' element = {<Home/>}/>
             <Route path='/about' element = {<About/>}/>
             <Route path='/contact' element = {<Contact/>}/>
+            <Route path="/firstpage" element={<FirstPage />} />
             <Route path='*' element = {<NoPage/>}/>
         </Routes>
         </BrowserRouter>
