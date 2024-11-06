@@ -7,7 +7,8 @@ import NoPage from './pages/NoPage'
 import React from 'react'; 
 import './App.css'; 
 import Game from './pages/Game'
-import FirstPage from './pages/FirstPage';
+import FirstPage from './pages/FirstPage'
+import NextPage from './pages/NextPage';
 
 
 export default function App() {
@@ -98,6 +99,7 @@ export default function App() {
             <Route path='/stats' element = {<Stats/>}/>
             <Route path='/game' element={<Game results={exampleResults}/>}/>
             <Route path="/firstpage" element={<FirstPage />} />
+            <Route path="/nextpage" element={<NextPage />} />
             <Route path='*' element = {<NoPage/>}/>
         </Routes>
         </BrowserRouter>
