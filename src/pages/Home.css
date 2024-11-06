@@ -132,7 +132,7 @@
 }
 
 /* Voor laptops en desktops */
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
  .popup{
   background-color: rgba(240, 240, 240, 0);
   display: flex;
