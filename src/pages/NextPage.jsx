@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NextPage.css';
 
-function NextPage() {
-    const [selectedAnswer, setSelectedAnswer] = useState(null); // Huidige geselecteerde antwoord
+const NextPage = () => {
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const navigate = useNavigate();
 
     const handleAnswerClick = (answer) => {
-        setSelectedAnswer(answer); // Simuleer een selectie van een antwoord
+        setSelectedAnswer(answer);
+    };
+
+    const handleNextClick = () => {
+        navigate('/loop'); // Navigeren naar de LoopPage
     };
 
     return (
         <div className="vraag-container">
-            <h2 className="vraag-titel">de dom toren</h2>
+            <h1 className="vraag-titel">de dom toren</h1>
             <p className="vraag-beschrijving">wat is 1 + 1</p>
             <div className="antwoorden">
                 <button
@@ -20,7 +26,7 @@ function NextPage() {
                     antwoord A
                 </button>
                 <button
-                    className={`antwoord-knop neutral`} // Standaard lichtgrijs
+                    className={`antwoord-knop ${selectedAnswer === 'B' ? 'neutral' : 'neutral'}`}
                     onClick={() => handleAnswerClick('B')}
                 >
                     antwoord B
@@ -32,8 +38,14 @@ function NextPage() {
                     antwoord C
                 </button>
             </div>
+
+            {selectedAnswer && (
+                <button className="next-button" onClick={handleNextClick}>
+                    Volgende
+                </button>
+            )}
         </div>
     );
-}
+};
 
 export default NextPage;

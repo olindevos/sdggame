@@ -9,6 +9,7 @@ import './App.css';
 import Game from './pages/Game'
 import FirstPage from './pages/FirstPage'
 import NextPage from './pages/NextPage';
+import LoopPage from './pages/LoopPage';
 
 
 export default function App() {
@@ -100,6 +101,7 @@ export default function App() {
             <Route path='/game' element={<Game results={exampleResults}/>}/>
             <Route path="/firstpage" element={<FirstPage />} />
             <Route path="/nextpage" element={<NextPage />} />
+            <Route path="/loop" element={<LoopPage />} />
             <Route path='*' element = {<NoPage/>}/>
         </Routes>
         </BrowserRouter>
