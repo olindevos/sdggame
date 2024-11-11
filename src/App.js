@@ -10,6 +10,9 @@ import Game from './pages/Game'
 import FirstPage from './pages/FirstPage'
 import NextPage from './pages/NextPage';
 import LoopPage from './pages/LoopPage';
+import ThirdPage from './pages/ThirdPage'
+import DupePage from './pages/DupePage'
+import LastPage from './pages/LastPage'
 
 
 export default function App() {
@@ -102,6 +105,9 @@ export default function App() {
             <Route path="/firstpage" element={<FirstPage />} />
             <Route path="/nextpage" element={<NextPage />} />
             <Route path="/loop" element={<LoopPage />} />
+            <Route path="/thirdpage" element={<ThirdPage />} />
+            <Route path="/dupe" element={<DupePage />} />
+            <Route path="/lastpage" element={<LastPage />} />
             <Route path='*' element = {<NoPage/>}/>
         </Routes>
         </BrowserRouter>

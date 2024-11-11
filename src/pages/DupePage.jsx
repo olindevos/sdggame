@@ -1,12 +1,12 @@
 import React from 'react';
-import './LoopPage.css';
+import './DupePage.css';
 import { useNavigate } from 'react-router-dom';
 
 const LoopPage = () => {
     const navigate = useNavigate();
 
  const handleBenErClick = () => {
-        navigate('/thirdpage');
+        navigate('/lastpage');
         console.log("Je bent er!");
     };
 
