@@ -1,0 +1,18 @@
+.action-block { 
+  margin-top: 30px; 
+} 
+
+.stop-button { 
+  background-color: #ff4d4d; 
+  color: white; 
+  border: none; 
+  padding: 15px 30px; 
+  border-radius: 5px;
+  font-size: 1.2em; 
+  cursor: pointer; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+} 
+
+.stop-button:hover { 
+  background-color: #cc0000; 
+} 

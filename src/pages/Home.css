@@ -1,3 +1,10 @@
+body {
+  background-image: url("utrechtggm.png");
+  background-size: cover;          /* Scales the image to cover the entire screen */
+  background-position: center;     /* Centers the image */
+  background-repeat: no-repeat;    /* Prevents the image from repeating */
+  background-attachment: fixed;
+}
 .popup{
     background-color: rgba(240, 240, 240, 0.5);
     border-radius: 15px;

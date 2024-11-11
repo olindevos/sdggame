@@ -35,8 +35,10 @@ export default function Home() {
 
   return (
     <>
+    
+      
       <Header />
-
+        
       <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
       <div>
         <a href="Game">play</a>
@@ -44,6 +46,7 @@ export default function Home() {
       <div>
         <a href="FirstPage">play</a>
       </div>
+    
 
       {/* Toon de popup als showPopup true is */}
       {showPopup && (
