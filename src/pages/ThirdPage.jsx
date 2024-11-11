@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './NextPage.css';
+import './ThirdPage.css';
 
-const NextPage = () => {
+
+const ThirdPage = () => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const navigate = useNavigate();
 
@@ -11,13 +12,13 @@ const NextPage = () => {
     };
 
     const handleNextClick = () => {
-        navigate('/loop'); // Navigeren naar de LoopPage
+        navigate('/dupe'); // Navigeren naar de LoopPage
     };
 
     return (
         <div className="vraag-container">
-            <h1 className="vraag-titel">Utrecht Centraal</h1>
-            <p className="vraag-beschrijving">?</p>
+            <h1 className="vraag-titel">Universiteitsbibliotheek Utrecht</h1>
+            <p className="vraag-beschrijving">Hoe kan beter onderwijs bijdragen aan het verminderen van ongelijkheid?</p>
             <div className="antwoorden">
                 <button
                     className={`antwoord-knop ${selectedAnswer === 'A' ? 'incorrect' : 'neutral'}`}
@@ -48,4 +49,4 @@ const NextPage = () => {
     );
 };
 
-export default NextPage;
+export default ThirdPage;

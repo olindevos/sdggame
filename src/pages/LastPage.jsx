@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './NextPage.css';
+import './LastPage.css';
 
-const NextPage = () => {
+
+const LastPage = () => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const navigate = useNavigate();
 
@@ -11,13 +12,13 @@ const NextPage = () => {
     };
 
     const handleNextClick = () => {
-        navigate('/loop'); // Navigeren naar de LoopPage
+        navigate('/stats'); // Navigeren naar de LoopPage
     };
 
     return (
         <div className="vraag-container">
-            <h1 className="vraag-titel">Utrecht Centraal</h1>
-            <p className="vraag-beschrijving">?</p>
+            <h1 className="vraag-titel">Waterinstallaties Utrecht </h1>
+            <p className="vraag-beschrijving">Welke van de volgende acties bespaart het meeste water in een huishouden?</p>
             <div className="antwoorden">
                 <button
                     className={`antwoord-knop ${selectedAnswer === 'A' ? 'incorrect' : 'neutral'}`}
@@ -41,11 +42,11 @@ const NextPage = () => {
 
             {selectedAnswer && (
                 <button className="next-button" onClick={handleNextClick}>
-                    Volgende
+                    Finish
                 </button>
             )}
         </div>
     );
 };
 
-export default NextPage;
+export default LastPage;
