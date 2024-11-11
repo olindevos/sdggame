@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Header from '../components/header';
 import './Home.css'; // Vergeet niet om je bijbehorende CSS toe te voegen
-
-
-
 
 export default function Home() {
   // State om de popup te tonen of te verbergen
@@ -33,10 +30,18 @@ export default function Home() {
     setCurrentPOI((prevPOI) => (prevPOI === 5 ? 1 : prevPOI + 1));
   };
 
+  useEffect(() => {
+    // Voeg de class 'home-page' toe aan de body als deze pagina wordt geladen
+    document.body.classList.add('home-page');
+
+    // Verwijder de class 'home-page' als de component wordt verwijderd
+    return () => {
+      document.body.classList.remove('home-page');
+    };
+  }, []); // Lege afhankelijkhedenlijst betekent dat dit maar één keer wordt uitgevoerd bij het laden van de pagina
+
   return (
     <>
-    
-      
       <Header />
         
       <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
@@ -47,7 +52,6 @@ export default function Home() {
         <a href="FirstPage">play</a>
       </div>
     
-
       {/* Toon de popup als showPopup true is */}
       {showPopup && (
         <div className="popup">
@@ -76,10 +80,8 @@ export default function Home() {
 
             {/* Sluit de popup */}
             <button onClick={togglePopup} className="close-button">X</button>
-          
           </div>
         </div>
-        
       )}
     </>
   );
