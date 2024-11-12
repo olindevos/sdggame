@@ -156,6 +156,18 @@ body.home-page {
 }
 
 @media (max-width: 325px) {
+  .popup {
+    background-color: rgba(127, 127, 127, 0.5);
+    border-radius: 15px;
+    position: fixed; /* Fix position */
+    top: 0;
+    right: 0; /* Align to the right side */
+    width: 100%; /* Set width for the popup */
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: bottom; /* Center horizontally */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
   .popup-inner {
     width: 225px; /* Adjust for very small screens */
     height: 80vh; /* Allow the height to be flexible */
@@ -169,12 +181,18 @@ body.home-page {
 /* For laptops and desktops */
 @media (max-width: 1280px) {
   .popup {
-    background-color: rgba(240, 240, 240, 0);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
+    background-color: rgba(127, 127, 127, 0.5);
+    border-radius: 15px;
+    position: fixed; /* Fix position */
     top: 0;
+    right: 0; /* Align to the right side */
+    width: 400px; /* Set width for the popup */
+    height: calc(100%); /* Adjust height dynamically */
+    display: flex;
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: bottom; /* Center horizontally */
+    z-index: 1000; /* Ensure it stays above other content */
   }
   .popup-inner {
     margin-right: 20px;
