@@ -1,164 +1,301 @@
-body.home-page{
+body.home-page {
   background-image: url("utrechtggm.png");
-  background-size: cover;          /* Scales the image to cover the entire screen */
-  background-position: center;     /* Centers the image */
-  background-repeat: no-repeat;    /* Prevents the image from repeating */
+  background-size: cover; /* Scales the image to cover the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed;
+  width: 100%;
 }
-.popup{
-    background-color: rgba(240, 240, 240, 0.5);
-    border-radius: 15px;
-    height: 350px;
-    max-height: 80%;
-    width: 350px;
-    max-width: 80%;
-    position: relative; /* Voeg deze regel toe om de poi-content absoluut te positioneren */
-    overflow: hidden; /* Voeg overflow toe zodat de content buiten de popup verborgen blijft */
-    position: fixed; /* Zorgt ervoor dat de popup vast blijft staan, ook bij scrollen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex; /* Gebruik flexbox om te centreren */
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
-    z-index: 1000; /* Zorg ervoor dat de popup boven andere elementen verschijnt */
+
+.popup {
+  background-color: rgba(127, 127, 127, 0.5);
+  border-radius: 15px;
+  position: fixed; /* Fix the position relative to the viewport */
+  top: 0; /* Align it to the top of the viewport */
+  right: 0; /* Align it to the right side of the viewport */
+  width: 400px; /* Set the desired width of the popup */
+  height: calc(100vh - 40px); /* Set height dynamically to account for margins/padding */
+  display: flex;
+  flex-direction: column; /* Stack contents vertically */
+  justify-content: flex-start; /* Align content at the top */
+  z-index: 1000; /* Ensure it stays above other content */
 }
+
 .popup-inner {
-  position: relative;
-  width: 300px; /* Breedte van de popup */
-  height: 300px;
-  max-width: 600px; /* Max-breedte van de popup */
+  width: 100%; /* Full width of the popup */
+  height: calc(100vh - 60px); /* Adjust height dynamically to fit within the popup */
   padding: 20px;
-  background-color: white; /* Witte achtergrond voor de popup */
-  border-radius: 10px; /* Ronde hoeken */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
-  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-.popup-info{
-  height: 200px;
+
+.popup-info {
+  flex-grow: 1; /* Let this area grow to take up available space */
+  overflow-y: auto; /* Enable scrolling if the content overflows */
+  max-height: 90%; /* Prevent it from growing beyond the popup size */
 }
-/* Animatiestijlen voor de CSSTransition */
+
+.open-popup-button {
+  height: 40px;
+}
+
 .poi-content {
-    position: relative;
-  }
-  .poi-content-title{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-  .navigation-buttons{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 50vw;
-    height: 6vh;
-
-
-  }
-  .nav-button{
-    background: transparent;
-    border: none;
-    font-size: 30px;
-  }
-  .PCThr{
-    width: 80%;
-    height: 2px;
-    background-color: black;
-    border: none;
-    margin-top: 0px;
-  }
-/* Animatie naar rechts */
-.right-enter {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  .right-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 500ms ease-in-out ;
-  }
-  
-  .right-exit {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .right-exit-active {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 500ms ease-in-out;
-  }
-  
-  /* Animatie naar links */
-  .left-enter {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  .left-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 500ms ease-in-out;
-  }
-  
-  .left-exit {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .left-exit-active {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 500ms ease-in-out;
-  }
-  .close-button {
-    border: none;
-    font-size: 30px;
-    background-color: transparent;
-  }
-  
-  /* Voor telefoons in portretmodus */
-@media (max-width: 425px) {
- 
-}
-@media (max-width: 375px) {
-  .popup-inner {
-    width: 275px; /* Breedte van de popup */
-    height: 275px;
-  }
-  .popup-info{
-    height: 180px;
-  }
-}
-@media (max-width: 320px) {
-  .popup-inner {
-    width: 225px; /* Breedte van de popup */
-    height: 250px;
-  }
-  .popup-info{
-    height: 160px;
-  }
+  position: relative;
+  height: 100%;
 }
 
-/* Voor laptops en desktops */
-@media (max-width: 1280px) {
- .popup{
-  background-color: rgba(240, 240, 240, 0);
+.poi-content-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.navigation-buttons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 105vh;
- }
- .popup-inner{
-  margin-right: 20px;
-  height: 700px;
- }
- .popup-info{
-  height: 600px;
-}
+  justify-content: space-around;
+  width: 50vw;
+  height: 6vh;
 }
 
-/* Voor extra grote schermen */
+.nav-button {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+.PCThr {
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  border: none;
+  margin-top: 0px;
+}
+
+/* Animations */
+.right-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.right-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 500ms ease-in-out;
+}
+
+.right-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.right-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 500ms ease-in-out;
+}
+
+.left-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 500ms ease-in-out;
+}
+
+.left-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.left-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 500ms ease-in-out;
+}
+
+.close-button {
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* For phones in portrait mode */
+@media (max-width: 425px) {
+  .popup-inner {
+    width: 275px;
+    height: 275px;
+    top: 0;
+  }
+  .popup-info {
+    height: 180px;
+    width: 250px;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 375px) {
+  .popup-inner {
+    width: 275px;
+    height: 275px; /* Fixed height for small screens */
+    top: 0;
+  }
+  .popup-info {
+    height: 180px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 325px) {
+  .popup-inner {
+    width: 225px; /* Adjust for very small screens */
+    height: 80vh; /* Allow the height to be flexible */
+  }
+  .popup-info {
+    height: 160px;
+    width: 200px;
+  }
+}
+
+/* For laptops and desktops */
+@media (max-width: 1280px) {
+  .popup {
+    background-color: rgba(240, 240, 240, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    top: 0;
+  }
+  .popup-inner {
+    margin-right: 20px;
+    height: 700px;
+  }
+  .popup-info {
+    height: 600px;
+  }
+}
+
+/* For extra-large screens */
 @media (min-width: 1281px) {
-  /* Stijlen voor zeer grote schermen (extra large) */
+  .popup {
+    background-color: rgba(127, 127, 127, 0.5);
+    border-radius: 15px;
+    position: fixed; /* Fix position */
+    top: 0;
+    right: 0; /* Align to the right side */
+    width: 400px; /* Set width for the popup */
+    height: calc(100%); /* Adjust height dynamically */
+    display: flex;
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: bottom; /* Center horizontally */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .popup-inner {
+    width: 100%; /* Full width of the popup */
+    height: calc(100%); /* Adjust height dynamically */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-info {
+    height: 80%; /* Allow for content scrolling */
+    overflow-y: auto; /* Enable scrolling if content exceeds the popup size */
+    width: 94%;
+    margin-left: 3%;
+  }
+}
+
+/* Stijlen voor zeer grote schermen (extra large) */
+/* Center the button below the header */
+.button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Align the button vertically */
+  width: 100%;
+  position: absolute; /* Position it absolutely relative to the page */
+  top: 90px; /* Adjust this to be below the header (assuming the header height is 70px, you can adjust the value) */
+  left: 50%; /* Align it in the center horizontally */
+  transform: translateX(-50%); /* Offset by 50% of the button's width to perfectly center it */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Styling for the button (optional adjustments) */
+.open-popup-button {
+  background-color: white;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.open-popup-button:hover {
+  background-color: #dcfeea;
+}
+/* Center the Play button at the bottom */
+.play-button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Align the button vertically */
+  width: 100%;
+  position: fixed; /* Fix the button to the bottom of the page */
+  bottom: 20px; /* Space from the bottom of the page */
+  left: 50%; /* Align it in the center horizontally */
+  transform: translateX(-50%); /* Offset by 50% of the button's width to perfectly center it */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Styling for the Play button */
+a {
+  display: inline-block;
+  background-color: white;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #dcfeea;
+}
+.close-button {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Align the button vertically */
+  width: 376px;
+  position: fixed; /* Fix the button to the bottom of the page */
+  bottom: 20px; /* Space from the bottom of the page */
+  right: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: black; /* Set color for the "X" */
+  cursor: pointer;
+  font-size: 24px; /* Make the "X" larger */
+  transition: all 0.3s ease;
 }

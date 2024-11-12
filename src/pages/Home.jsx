@@ -44,14 +44,13 @@ export default function Home() {
     <>
       <Header />
         
-      <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
-      <div>
-        <a href="Game">play</a>
+      <div className="button-container">
+          <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
       </div>
-      <div>
-        <a href="FirstPage">play</a>
+      <div className="play-button-container">
+           <a href="/FirstPage">Play</a>
       </div>
-    
+
       {/* Toon de popup als showPopup true is */}
       {showPopup && (
         <div className="popup">
@@ -73,13 +72,15 @@ export default function Home() {
                     </div>
                   </div>
                   <hr className='PCThr'></hr>
-                  <div className='popup-info'></div>
+                  <div className='popup-info'>Lorem ipsum odor amet, consectetuer adipiscing elit. Felis felis elit augue laoreet phasellus metus. Consectetur orci blandit purus himenaeos, blandit ornare nam libero. Pulvinar vehicula curae praesent urna; sollicitudin cursus sollicitudin porttitor. Pellentesque posuere sem odio montes nostra. Consectetur natoque arcu mollis natoque morbi. Apretium hac varius condimentum est vestibulum eget aliquam. Sapien natoque purus viverra interdum vivamus tempor maecenas. Vestibulum vehicula suspendisse eu orci ridiculus.Consectetur orci blandit purus himenaeos, blandit ornare nam libero.</div>
                 </div>
               </CSSTransition>
             </SwitchTransition>
 
             {/* Sluit de popup */}
-            <button onClick={togglePopup} className="close-button">X</button>
+            <div className="close-button">
+              <button onClick={togglePopup}className="close-button">X</button> {/* Attach togglePopup to close the popup */}
+            </div>
           </div>
         </div>
       )}
