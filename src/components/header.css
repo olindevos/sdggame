@@ -1,86 +1,139 @@
-.NavBar{
-  width: 100vw;
+/* General Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%; /* Ensure the body takes the full width */
+  height: 100%; /* Full height for body */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* NavBar styling */
+.NavBar {
+  width: 100vw; /* Use 100% of the viewport width */
   height: 70px;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(240, 240, 240, 0.5);
+  align-items: center; /* Align vertically */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 10px; /* Ensure padding doesn’t cause overflow */
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Positioning context for children */
+  flex-shrink: 0; /* Prevent navbar from shrinking */
 }
 
-.InnerNav{
+.NavBar .Logo {
+  width: 160px; /* Fixed size for logo */
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 15px;
-  width: 200px;
-}
-
-.Logo {
-  width: 160px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
-.BurgerMenu {
+.NavBar .BurgerMenu {
   display: none;
   cursor: pointer;
 }
 
-.BurgerMenu div {
+.NavBar .BurgerMenu div {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 5px;
 }
 
-/* Hide the navigation links initially for mobile */
+/* InnerNav - links styling */
 .InnerNav {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  font-size: 15px;
+  width: 100%; /* Ensure full width for links */
+  max-width: 100%; /* Prevent exceeding width */
+  overflow: hidden; /* Hide any overflow */
+  padding-right: 20px; /* Add padding to the right */
 }
 
-/* For phones in portrait mode */
+.InnerNav a {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none
+}
+
+.InnerNav a:hover {
+  background-color: #00000010;
+  border: none
+}
+
+/* For small screens, show burger menu and hide inner nav */
 @media (max-width: 425px) {
   .BurgerMenu {
-      display: flex;
+    display: flex;
   }
 
   .NavBar {
-      justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .InnerNav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%; /* Full width for mobile */
+    background-color: rgba(240, 240, 240, 0.9);
+    z-index: 100;
+    flex-direction: column;
+    padding-right: 20px; /* Ensure padding for mobile as well */
   }
 
   .InnerNav.active {
-      display: flex;
-      position: absolute;
-      top: 55px;
-      left: 205px;
-      width: 50vw;
-      background-color: rgba(240, 240, 240, 0.9);
-      flex-direction: column;
-      z-index: 100;
+    display: flex;
   }
 
   .InnerNav a {
-      padding: 8px;
-      display: flex;
+    margin: 5px 0;
+  }
+}
 
-  }
+/* Play button styling to match others */
+.open-popup-button,
+a {
+  display: inline-block;
+  background-color: white;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-@media (max-width: 375px) {
-  .InnerNav.active {
-      top: 55px;
-      left: 180px;
-  }
+
+.open-popup-button:hover,
+a:hover {
+  background-color: #00000010;
 }
-@media (max-width: 320px) {
-  .InnerNav.active {
-      top: 55px;
-      left: 155px;
-  }
-}
-/* Larger screens, default display */
+
+/* For larger screens, use regular navbar layout */
 @media (min-width: 426px) {
   .InnerNav {
-      display: flex;
+    display: flex;
+    justify-content: flex-end; /* Ensure right alignment */
+    padding-right: 20px; /* Apply padding to the right */
   }
 }
