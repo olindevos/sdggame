@@ -58,7 +58,7 @@ body.home-page {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 50vw;
+  width: 90vw;
   height: 6vh;
 }
 
@@ -130,63 +130,14 @@ body.home-page {
 }
 
 /* For phones in portrait mode */
-@media (max-width: 425px) {
-  .popup-inner {
-    width: 275px;
-    height: 275px;
-    top: 0;
-  }
-  .popup-info {
-    height: 180px;
-    width: 250px;
-  }
-}
-
-/* For very small phones */
-@media (max-width: 375px) {
-  .popup-inner {
-    width: 275px;
-    height: 275px; /* Fixed height for small screens */
-    top: 0;
-  }
-  .popup-info {
-    height: 180px;
-    width: 250px;
-  }
-}
-
-@media (max-width: 325px) {
+@media (max-width: 400px) {
   .popup {
     background-color: rgba(127, 127, 127, 0.5);
     border-radius: 15px;
     position: fixed; /* Fix position */
     top: 0;
     right: 0; /* Align to the right side */
-    width: 100%; /* Set width for the popup */
-    flex-direction: column; /* Stack contents vertically */
-    justify-content: flex-start; /* Align content at the top */
-    align-items: bottom; /* Center horizontally */
-    z-index: 1000; /* Ensure it stays above other content */
-  }
-  .popup-inner {
-    width: 225px; /* Adjust for very small screens */
-    height: 80vh; /* Allow the height to be flexible */
-  }
-  .popup-info {
-    height: 160px;
-    width: 200px;
-  }
-}
-
-/* For laptops and desktops */
-@media (max-width: 1280px) {
-  .popup {
-    background-color: rgba(127, 127, 127, 0.5);
-    border-radius: 15px;
-    position: fixed; /* Fix position */
-    top: 0;
-    right: 0; /* Align to the right side */
-    width: 400px; /* Set width for the popup */
+    width: calc(100%); /* Set width for the popup */
     height: calc(100%); /* Adjust height dynamically */
     display: flex;
     flex-direction: column; /* Stack contents vertically */
@@ -194,17 +145,29 @@ body.home-page {
     align-items: bottom; /* Center horizontally */
     z-index: 1000; /* Ensure it stays above other content */
   }
+
   .popup-inner {
-    margin-right: 20px;
-    height: 700px;
+    width: 100%; /* Full width of the popup */
+    height: calc(100%); /* Adjust height dynamically */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
+
   .popup-info {
-    height: 600px;
+    height: 80%; /* Allow for content scrolling */
+    overflow-y: auto; /* Enable scrolling if content exceeds the popup size */
+    width: 94%;
+    margin-left: 3%;
   }
 }
 
-/* For extra-large screens */
-@media (min-width: 1281px) {
+/* For laptops and desktops */
+@media (min-width: 400px) {
   .popup {
     background-color: rgba(127, 127, 127, 0.5);
     border-radius: 15px;
@@ -316,4 +279,9 @@ a:hover {
   cursor: pointer;
   font-size: 24px; /* Make the "X" larger */
   transition: all 0.3s ease;
+}
+@media (max-width: 400px) {
+  .close-button {
+    width: 188px;
+  }
 }
