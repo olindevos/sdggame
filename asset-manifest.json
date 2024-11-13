@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sdggame/static/css/main.4bb01a24.css",
+    "main.js": "/sdggame/static/js/main.1f3f4acd.js",
+    "static/js/453.e3949589.chunk.js": "/sdggame/static/js/453.e3949589.chunk.js",
+    "static/media/utrechtggm.png": "/sdggame/static/media/utrechtggm.58baa5cbb01c266e458f.png",
+    "index.html": "/sdggame/index.html",
+    "main.4bb01a24.css.map": "/sdggame/static/css/main.4bb01a24.css.map",
+    "main.1f3f4acd.js.map": "/sdggame/static/js/main.1f3f4acd.js.map",
+    "453.e3949589.chunk.js.map": "/sdggame/static/js/453.e3949589.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bb01a24.css",
+    "static/js/main.1f3f4acd.js"
+  ]
+}
