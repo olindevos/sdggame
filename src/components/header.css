@@ -80,7 +80,7 @@ body, html {
 /* For small screens, show burger menu and hide inner nav */
 @media (max-width: 425px) {
   .BurgerMenu {
-    display: flex;
+    display: flex !important;
   }
 
   .NavBar {
