@@ -8,99 +8,85 @@
 }
 
 body, html {
-  width: 100%; /* Ensure the body takes the full width */
-  height: 100%; /* Full height for body */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 /* NavBar styling */
 .NavBar {
-  width: 100vw; /* Use 100% of the viewport width */
+  width: 100vw;
   height: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align vertically */
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0 10px; /* Ensure padding doesn’t cause overflow */
-  overflow: hidden; /* Prevent overflow */
-  position: relative; /* Positioning context for children */
-  flex-shrink: 0; /* Prevent navbar from shrinking */
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 0 10px;
+  position: relative;
 }
 
-.NavBar .Logo {
-  width: 160px; /* Fixed size for logo */
+.Logo {
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* Prevent shrinking */
 }
 
-.NavBar .BurgerMenu {
-  display: none;
+.BurgerMenu {
+  display: none; /* Verborgen voor grotere schermen */
+  flex-direction: column;
   cursor: pointer;
 }
 
-.NavBar .BurgerMenu div {
+.BurgerMenu div {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 5px;
 }
 
-/* InnerNav - links styling */
+/* InnerNav - standaard verborgen */
 .InnerNav {
-  display: flex;
+  display: none; /* Navigatie verborgen, totdat de burger menu wordt geactiveerd */
   flex-direction: row;
-  justify-content: flex-end; /* Align to the right */
   align-items: center;
   font-size: 15px;
-  width: 100%; /* Ensure full width for links */
-  max-width: 100%; /* Prevent exceeding width */
-  overflow: hidden; /* Hide any overflow */
-  padding-right: 20px; /* Add padding to the right */
+  width: 100%;
+  padding-right: 20px;
+}
+
+/* Active class voor de navigatie links */
+.InnerNav.active {
+  display: flex;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 100;
+  flex-direction: column;
 }
 
 .InnerNav a {
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0);
   color: #333;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
   text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s ease;
-  border: none
 }
 
+/* Hover effect voor links */
 .InnerNav a:hover {
   background-color: #00000010;
-  border: none
 }
 
-/* For small screens, show burger menu and hide inner nav */
+/* Voor mobiele schermen */
 @media (max-width: 425px) {
   .BurgerMenu {
-    display: flex !important;
+    display: flex; /* Toon burger menu voor kleine schermen */
   }
 
   .NavBar {
     justify-content: space-between;
-  }
-
-  .InnerNav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%; /* Full width for mobile */
-    background-color: rgba(240, 240, 240, 0.9);
-    z-index: 100;
-    flex-direction: column;
-    padding-right: 20px; /* Ensure padding for mobile as well */
-  }
-
-  .InnerNav.active {
-    display: flex;
   }
 
   .InnerNav a {
@@ -108,32 +94,11 @@ body, html {
   }
 }
 
-/* Play button styling to match others */
-.open-popup-button,
-a {
-  display: inline-block;
-  background-color: white;
-  color: #333;
-  border: 2px solid #ddd;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.open-popup-button:hover,
-a:hover {
-  background-color: #00000010;
-}
-
-/* For larger screens, use regular navbar layout */
+/* Voor grotere schermen, toon de navigatie altijd */
 @media (min-width: 426px) {
   .InnerNav {
-    display: flex;
-    justify-content: flex-end; /* Ensure right alignment */
-    padding-right: 20px; /* Apply padding to the right */
+    display: flex; /* Toon navigatie standaard op grotere schermen */
+    justify-content: flex-end;
+    padding-right: 20px;
   }
 }
