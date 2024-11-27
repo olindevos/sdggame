@@ -1,24 +1,23 @@
 import React from 'react';
-import './FirstPage.css';
+import '././FirstPage.css';
 import { useNavigate } from 'react-router-dom';
 
-
-function FirstPage() {
+const FirstPage = () => {
     const navigate = useNavigate();
 
-    const handleButtonClick = () => {
-        navigate('/nextpage'); // Navigeer naar de volgende pagina
+ const handleBenErClick = () => {
+        navigate('/nextpage');
+        console.log("Je bent er!");
     };
 
     return (
-        <div className="pagina-container">
-            <p className="tekst">je bent nu bij: ...</p>
-            <button className="volgende-knop">ben er</button>
-            <button className="volgende-knop" onClick={handleButtonClick}>
+        <div className="loop-container">
+            <h1 className="loop-titel">je bent nu bij Utrecht Centraal!</h1>
+            <button className="ben-er-button" onClick={handleBenErClick}>
                 ben er
             </button>
         </div>
     );
-}
+};
 
 export default FirstPage;

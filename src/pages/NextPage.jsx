@@ -29,13 +29,12 @@ const NextPage = () => {
         }
     };
 
-    // useEffect om de vraag op te halen bij het laden van de component
     useEffect(() => {
         fetchQuestion();
     }, []);
 
     const handleAnswerClick = (answer) => {
-        if (!selectedAnswer) { // Alleen doorvoeren als er nog geen antwoord geselecteerd is
+        if (!selectedAnswer) { 
             setSelectedAnswer(answer);
             setIsCorrect(answer === questionData.correct_answer); // Controleer of het antwoord correct is
         }
