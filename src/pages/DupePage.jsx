@@ -12,7 +12,7 @@ const LoopPage = () => {
 
     return (
         <div className="loop-container">
-            <h1 className="loop-titel">Loop nu naar...</h1>
+            <h1 className="loop-titel">Loop nu naar Waterzuiveringsinstallatie Utrecht </h1>
             <button className="ben-er-button" onClick={handleBenErClick}>
                 ben er
             </button>

@@ -13,6 +13,7 @@ import LoopPage from './pages/LoopPage';
 import ThirdPage from './pages/ThirdPage'
 import DupePage from './pages/DupePage'
 import LastPage from './pages/LastPage'
+import TeamPage from './pages/TeamPage'
 
 
 export default function App() {
@@ -108,6 +109,7 @@ export default function App() {
             <Route path="/thirdpage" element={<ThirdPage />} />
             <Route path="/dupe" element={<DupePage />} />
             <Route path="/lastpage" element={<LastPage />} />
+            <Route path="/TeamPage" element={<TeamPage />} />
             <Route path='*' element = {<NoPage/>}/>
         </Routes>
         </BrowserRouter>
