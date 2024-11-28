@@ -13,7 +13,6 @@ function FirstPage() {
     return (
         <div className="pagina-container">
             <p className="tekst">je bent nu bij: ...</p>
-            <button className="volgende-knop">ben er</button>
             <button className="volgende-knop" onClick={handleButtonClick}>
                 ben er
             </button>
