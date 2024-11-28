@@ -58,7 +58,7 @@ export default function Home() {
       </div>
       <div className="play-button-container">
         <a href="/FirstPage">Play</a>
-           <a href="/TeamPage">Play</a> bfd9203ad0bed2e7586701f65b49de5316ffb52a
+           
       </div>
 
       {/* Toon de popup als showPopup true is */}

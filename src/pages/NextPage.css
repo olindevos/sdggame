@@ -73,20 +73,21 @@
 
 
   
-  .correct.animate {
-    animation: correct-answer 0.6s ease-in-out;
+@keyframes correct-answer {
+  0% {
+    transform: scale(1);
+    background-color: #4caf50;
   }
-  @keyframes correct-answer {
-    0% {
-      transform: scale(1);
-      background-color: #4caf50;
-    }
-    50% {
-      transform: scale(1.1);
-      background-color: #66bb6a;
-    }
-    100% {
-      transform: scale(1);
-      background-color: #4caf50;
-    }
+  50% {
+    transform: scale(1.1);
+    background-color: #66bb6a;
   }
+  100% {
+    transform: scale(1);
+    background-color: #4caf50;
+  }
+}
+
+.correct.animate {
+  animation: correct-answer 0.6s ease-in-out;
+}

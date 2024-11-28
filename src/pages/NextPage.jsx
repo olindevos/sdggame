@@ -22,37 +22,10 @@ const NextPage = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
- HEAD
       const data = await response.json();
       setQuestionData(data);
     } catch (error) {
       console.error('Error fetching question:', error);
-
-            const data = await response.json();
-            setQuestionData(data);
-    } catch (error) {
-            console.error('Error fetching question:', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchQuestion();
-    }, []);
-
-    const handleAnswerClick = (answer) => {
-        if (!selectedAnswer) { 
-            setSelectedAnswer(answer);
-            setIsCorrect(answer === questionData.correct_answer); // Controleer of het antwoord correct is
-        }
-    };
-
-    const handleNextClick = () => {
-        navigate('/loop'); // Navigeren naar de LoopPage
-    };
-
-    // Return een laadindicator als de data nog niet is opgehaald
-    if (!questionData) {
-        return <div>Loading...</div>;
     }
   };
 
