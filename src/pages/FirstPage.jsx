@@ -12,10 +12,7 @@ const FirstPage = () => {
   };
 
   return (
-    <div className="pagina-container">
-      <p className="tekst">je bent nu bij: ...</p>
-      <button className="volgende-knop" onClick={handleBenErClick}>Volgende</button>
-      
+    <div className="pagina-container">      
       <div className="loop-container">
         <h1 className="loop-titel">je bent nu bij Utrecht Centraal!</h1>
         <button className="ben-er-button" onClick={handleBenErClick}>
