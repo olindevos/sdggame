@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Header from '../components/header';
 import './Home.css'; // Vergeet niet om je bijbehorende CSS toe te voegen
+import CreateJoin from './CreateJoin';
 
 export default function Home() {
   // State om de popup te tonen of te verbergen
@@ -57,7 +58,7 @@ export default function Home() {
         <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
       </div>
       <div className="play-button-container">
-        <a href="/FirstPage">Play</a>
+        <a href="/createjoin">Play</a>
            
       </div>
 

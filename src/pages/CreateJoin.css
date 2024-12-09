@@ -1,0 +1,68 @@
+.CJpage{
+    height: 90Vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+}
+.CJI{
+    height: 10Vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    flex-direction: row;
+}
+.CJII{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #979FC4;
+}
+.CJII img {
+    height: 25px;
+}
+.CJbut{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    width: 150px;
+}
+.CreateBut {
+    border: none;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    background-color: #4E598C;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Voegt een vloeiende overgang toe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CreateBut:hover {
+    background-color: #626FA7; /* Achtergrondkleur wordt rood bij hover */
+}
+.JoinBut {
+    border: none;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    background-color: #626FA7;
+    transition: background-color 0.3s ease; /* Voegt een vloeiende overgang toe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.JoinBut:hover {
+    background-color: #7C87B6; /* Achtergrondkleur wordt rood bij hover */
+}
+

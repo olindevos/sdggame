@@ -13,7 +13,9 @@ import LoopPage from './pages/LoopPage';
 import ThirdPage from './pages/ThirdPage'
 import DupePage from './pages/DupePage'
 import LastPage from './pages/LastPage'
-import TeamPage from './pages/TeamPage'
+import CreateJoin from './pages/CreateJoin'
+import Create from './pages/create'
+import Join from './pages/join'
 
 
 export default function App() {
@@ -109,8 +111,10 @@ export default function App() {
             <Route path="/thirdpage" element={<ThirdPage />} />
             <Route path="/dupe" element={<DupePage />} />
             <Route path="/lastpage" element={<LastPage />} />
-            <Route path="/TeamPage" element={<TeamPage />} />
             <Route path='*' element = {<NoPage/>}/>
+            <Route path="/createjoin" element = {<CreateJoin/>} />
+            <Route path="/create" element = {<Create/>} />
+            <Route path="/join" element = {<Join/>} />
         </Routes>
         </BrowserRouter>
     </div>
