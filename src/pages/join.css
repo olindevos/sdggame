@@ -38,4 +38,8 @@
     background-color: #626FA7;
     color: white;
     display: flex; align-items: center; justify-content: center;
+    transition: background-color 0.3s ease; 
+}
+.JBut:hover {
+    background-color: #7C87B6; /* Achtergrondkleur wordt rood bij hover */
 }
