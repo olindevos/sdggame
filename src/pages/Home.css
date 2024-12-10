@@ -236,6 +236,15 @@
   transform: translateX(-50%); /* Offset by 50% of the button's width to perfectly center it */
   z-index: 1000; /* Ensure it's above other content */
 }
+.PlayBtn{
+  height: 50px;
+  width: 150px;
+  border: none;
+  color: white;
+  font-size: 22px;
+  background-color: #4E598C;
+  display: flex; align-items: center; justify-content: center;
+}
 
 /* Styling for the Play button */
 a {

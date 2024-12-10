@@ -60,7 +60,7 @@ export default function Home() {
         <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
       </div>
       <div className="play-button-container">
-        <a href="/createjoin">Play</a>
+        <a className='PlayBtn' href="/createjoin">play</a>
            
       </div>
 
