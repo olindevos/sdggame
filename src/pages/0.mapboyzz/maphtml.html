@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of Utrecht Centraal</title>
+    <!-- Include MapLibre GL JS CSS -->
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        /* Set the height of the map container */
+        #map {
+            width: 100%;
+            height: 100vh; /* Full screen height */
+        }
+    </style>
+</head>
+<body>
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Include MapLibre GL JS script -->
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <script src="pois.js"></script>    
+    <script>
+        // Create a MapLibre GL JS map instance
+     
+        // Add an event listener for map load
+        map.on('load', () => {
+            console.log('Map has been loaded');
+        });
+    </script>
+
+</body>
+</html>

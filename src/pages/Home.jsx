@@ -53,6 +53,8 @@ export default function Home() {
     <>
       <Header />
   
+      <div id="map"></div>
+        
       
       <div className="button-container">
         <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
