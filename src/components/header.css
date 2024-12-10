@@ -23,6 +23,7 @@ body, html {
   background-color: rgba(240, 240, 240, 0.8);
   padding: 0 10px;
   position: relative;
+  z-index: 1000;
 }
 
 .Logo {
@@ -63,7 +64,7 @@ body, html {
   left: 0;
   width: 100%;
   background-color: rgba(240, 240, 240, 0.9);
-  z-index: 100;
+  z-index: 1000;
   flex-direction: column;
 }
 
