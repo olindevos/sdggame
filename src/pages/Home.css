@@ -252,9 +252,6 @@ a {
   transition: all 0.3s ease;
 }
 
-a:hover {
-  background-color: #dcfeea;
-}
 .close-button {
   display: flex;
   justify-content: center; /* Horizontally center the button */

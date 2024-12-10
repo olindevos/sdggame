@@ -10,7 +10,7 @@ export default function Create (){
 
                      <div className='Cpage1TC'>000-000</div>
                 </div>
-                <a className='CpagePlayBtn' href="">start spel</a>
+                <a className='CpagePlayBtn' href="FirstPage">start spel</a>
             </div>
                 <hr className='CpageHr'/>
 
