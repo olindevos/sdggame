@@ -10,6 +10,7 @@ const LoopPage = () => {
         console.log("Je bent er!");
     };
 
+            
     return (
         <div className="loop-container">
             <h1 className="loop-titel">Loop nu naar Universiteitsbibliotheek Utrecht</h1>
@@ -21,9 +22,3 @@ const LoopPage = () => {
 };
 
 export default LoopPage;
-
-
-
-
-
-

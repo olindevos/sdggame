@@ -1,1 +1,5 @@
- /index.html   200
+/*    /index.html   200
+
+het eerste web dat je ziet bij het filmpje is degene met de 404 melding deze melding komt doordat er geen _redirects file in de public folder zat en daardoor 
+kon netlify de volgende page niet vinden. maar door de _redirects toe te voegen en de /index.html   200 er in te zetten kon netlify de page wel vinden
+en werkt het web nu optimaal.
