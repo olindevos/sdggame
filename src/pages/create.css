@@ -43,3 +43,11 @@
 .CpagePlayBtn:hover{
     background-color: #7C87B6;
 }
+.CI1{
+    height: 10Vh;
+    width: 100vw;
+    position: absolute;
+}
+.CI1Btn{
+    border: none;
+}

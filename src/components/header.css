@@ -47,7 +47,7 @@ body, html {
 
 /* InnerNav - standaard verborgen */
 .InnerNav {
-  display: none; /* Navigatie verborgen, totdat de burger menu wordt geactiveerd */
+  display: none; 
   flex-direction: row;
   align-items: center;
   font-size: 15px;
@@ -58,10 +58,11 @@ body, html {
 /* Active class voor de navigatie links */
 .InnerNav.active {
   display: flex;
+  align-items: center;justify-content: center;
   position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
+  top: 85px;
+  left: 260px;
+  width: 150px;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 100;
   flex-direction: column;

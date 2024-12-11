@@ -10,7 +10,7 @@ export default function CreateJoin() {
     setShowPopup(true);
     setTimeout(() => {
       setShowPopup(false); // Popup verdwijnt na 10 seconden
-    }, 100000); // 10 seconden in milliseconden
+    }, 10000); // 10 seconden in milliseconden
   };
 
   return (

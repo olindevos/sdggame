@@ -1,8 +1,12 @@
 import './create.css'
+import ReturnImage from './return.svg'
 
 export default function Create (){
     return (
         <div className="CPage"> 
+         <div className="CI1">
+                <a className='CI1Btn' href='CreateJoin'> <img className='CJI2' src={ReturnImage} alt="" /></a>
+         </div>
             <div className='Cpage1'>
                 <div> 
                      <label className="team-name">teamnaam</label>
