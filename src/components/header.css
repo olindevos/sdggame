@@ -39,12 +39,7 @@ body, html {
   cursor: pointer;
 }
 
-.BurgerMenu div {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
-}
+
 
 /* InnerNav - standaard verborgen */
 .InnerNav {
