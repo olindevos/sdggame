@@ -135,7 +135,7 @@ export default function Home() {
                   </div>
                 </div>
               </CSSTransition>
-            </SwitchTransition>
+            </SwitchTransition> 
             <div className="close-button">
               <button onClick={togglePopup} className="close-button">
                 X
