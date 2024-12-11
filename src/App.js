@@ -16,7 +16,8 @@ import LastPage from './pages/LastPage'
 import CreateJoin from './pages/CreateJoin'
 import Create from './pages/create'
 import Join from './pages/join'
-
+import GPSGame from './components/GPSGame'
+import TestLocation from './pages/TestLocation';
 
 export default function App() {
     const exampleResults = [
@@ -115,6 +116,10 @@ export default function App() {
             <Route path="/createjoin" element = {<CreateJoin/>} />
             <Route path="/create" element = {<Create/>} />
             <Route path="/join" element = {<Join/>} />
+            <Route path="/gpsgame" element={<GPSGame />} />
+            <Route path="/testlocation" element={<TestLocation />} />
+
+
         </Routes>
         </BrowserRouter>
     </div>
