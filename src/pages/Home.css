@@ -227,7 +227,7 @@
 }
 
 .open-popup-button:hover {
-  background-color: #dcfeea;
+  background-color: #ffffff;
 }
 /* Center the Play button at the bottom */
 .play-button-container {
@@ -235,7 +235,7 @@
   justify-content: center; /* Horizontally center the button */
   align-items: center; /* Align the button vertically */
   width: 100%;
-  position: fixed; /* Fix the button to the bottom of the page */
+  position: absolute; /* Fix the button to the bottom of the page */
   bottom: 20px; /* Space from the bottom of the page */
   left: 50%; /* Align it in the center horizontally */
   transform: translateX(-50%); /* Offset by 50% of the button's width to perfectly center it */
@@ -248,7 +248,7 @@
   color: white;
   font-size: 22px;
   background-color: #4E598C;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center;;
 }
 
 /* Styling for the Play button */
