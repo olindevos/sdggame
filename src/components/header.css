@@ -39,7 +39,12 @@ body, html {
   cursor: pointer;
 }
 
-
+.BurgerMenu div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
 
 /* InnerNav - standaard verborgen */
 .InnerNav {
@@ -48,7 +53,6 @@ body, html {
   align-items: center;
   font-size: 15px;
   width: 100%;
-  padding-right: 20px;
 }
 
 /* Active class voor de navigatie links */
@@ -57,23 +61,32 @@ body, html {
   align-items: center;justify-content: center;
   position: absolute;
   top: 85px;
-  left: 260px;
-  width: 150px;
+  left: 280px;
+  width: 125px;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 1000;
   flex-direction: column;
 }
 
 .InnerNav a {
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
   transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+.InnerNavBtn{
+  display: flex;
+  align-items: center; justify-content: space-evenly;
 }
 
 /* Hover effect voor links */
 .InnerNav a:hover {
-  background-color: #00000010;
+  background-color: #979FC4;
+}
+.BurgernavImg{
+  height: 20px;
+  margin-right: 10px;
 }
 
 /* Voor mobiele schermen */
@@ -87,7 +100,7 @@ body, html {
   }
 
   .InnerNav a {
-    margin: 5px 0;
+    margin: 0;
   }
 }
 
