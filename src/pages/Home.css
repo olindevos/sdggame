@@ -12,6 +12,11 @@
   z-index: 1000; /* Ensure it stays above other content */
 }
 
+.open-popup-button, .play-button-container {
+  z-index: 2; /* Ensure buttons are visible above the map */
+}
+
+
 .popup-inner {
   width: 100%; /* Full width of the popup */
   height: calc(100vh - 60px); /* Adjust height dynamically to fit within the popup */
@@ -281,4 +286,13 @@ a {
   .close-button {
     width: 188px;
   }
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0.1;
 }
