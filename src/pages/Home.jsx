@@ -99,14 +99,12 @@ export default function Home() {
 
       {/* Button to display info for the first POI */}
       <div className="button-container">
-        <button onClick={togglePopup} className="open-popup-button">
-          Display info POI1
-        </button>
+        <button onClick={togglePopup} className="open-popup-button">Display info POI1</button>
       </div>
 
       {/* Play button */}
       <div className="play-button-container">
-        <a href="/createjoin">Play</a>
+        <a className='PlayBtn' href="/createjoin">Play</a>
       </div>
 
       {/* Popup for POI information */}
@@ -137,7 +135,7 @@ export default function Home() {
                   </div>
                 </div>
               </CSSTransition>
-            </SwitchTransition>
+            </SwitchTransition> 
             <div className="close-button">
               <button onClick={togglePopup} className="close-button">
                 X

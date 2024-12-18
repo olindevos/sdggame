@@ -1,5 +1,5 @@
 .CJpage{
-    height: 90Vh;
+    height: 80Vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -12,15 +12,30 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     z-index: 1;
     flex-direction: row;
+}
+.CJI2{
+    width: 60px;
+}
+.CJI1{
+    height: 10Vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    flex-direction: row;
+}
+.CJI1Btn{
+    border: none;
 }
 .CJII{
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    margin-left: 10px;
+    margin-left: 10px; margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,4 +80,39 @@
 .JoinBut:hover {
     background-color: #7C87B6; /* Achtergrondkleur wordt rood bij hover */
 }
-
+/* Basis popup styling */
+.popup {
+    position: fixed;
+    font-size: 20px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 1;
+    height: 100px;
+    width: 250px;
+    transition: opacity 2s ease; /* Smooth fade-out effect */
+  }
+ 
+  .popup1 {
+    position: fixed;
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 1;
+    height: 100px;
+    width: 250px;
+    transition: opacity 2s ease; /* Smooth fade-out effect */
+  }
+  
+  /* Popup verdwijnt */
+  .popup.fade-out {
+    opacity: 0;
+  }
+  

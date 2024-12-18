@@ -1,2 +1,53 @@
 .CPage{
+
+}
+.Cpage1{
+    height: 60vh;
+    display: flex; align-items: center; justify-content: space-around; flex-direction: column;
+}
+.Cpage1TC{
+    display: flex;
+    justify-content: center;
+}
+.team-name{
+    font-size: 12px;
+    width: 250px;
+    color: #9C9C9C;
+}
+.Cteam-name{
+    border: solid #4E598C 3px;
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.CpageHr{
+    width: 100%;
+}
+.Cpage2{
+    height: 40vh;
+
+}
+.CpagePlayBtn{
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: #626FA7;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color 0.3s ease; 
+}
+.CpagePlayBtn:hover{
+    background-color: #7C87B6;
+}
+.CI1{
+    height: 10Vh;
+    width: 100vw;
+    position: absolute;
+}
+.CI1Btn{
+    border: none;
 }
