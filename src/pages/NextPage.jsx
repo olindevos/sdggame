@@ -52,7 +52,7 @@ const NextPage = () => {
             console.error("API Fout:", err.message);
             setError("Fout bij ophalen van vraag.");
           });
-      }, 10000); 
+      }, 1000); 
 
       return () => clearInterval(interval); 
     }

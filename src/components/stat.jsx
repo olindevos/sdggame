@@ -5,7 +5,7 @@ import arrowdown from './arrowdown.png';
 export default function Stat() {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const toggleExpand = () => {
+    const toggleExpand = () => { 
         setIsExpanded(!isExpanded);
     };
 
