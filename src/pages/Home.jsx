@@ -3,6 +3,7 @@ import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Header from '../components/header';
 import './Home.css';
 import maplibregl from 'maplibre-gl';  // Import maplibre-gl here
+import "maplibre-gl/dist/maplibre-gl.css";
 
 export default function Home() {
   const mapContainer = useRef(null);
@@ -60,7 +61,7 @@ export default function Home() {
           ]
         },
         center: [5.109664, 52.088890], // Utrecht Centraal Station
-        zoom: 14 // Initial zoom level for better view
+        zoom: 4 // Initial zoom level for better view
       });
 
       // Add navigation controls to the map

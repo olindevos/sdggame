@@ -215,9 +215,9 @@
 
 /* Styling for the button (optional adjustments) */
 .open-popup-button {
-  background-color: white;
+  background-color: 76CB98;
   color: #333;
-  border: 2px solid #ddd;
+  border: 2px solid #76CB98;
   padding: 10px 20px;
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -247,7 +247,7 @@
   border: none;
   color: white;
   font-size: 22px;
-  background-color: #4E598C;
+  background-color: #76CB98;
   display: flex; align-items: center; justify-content: center;;
 }
 
@@ -289,10 +289,11 @@ a {
 }
 
 #map {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0.1;
 }
+
