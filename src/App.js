@@ -18,6 +18,7 @@ import Create from './pages/create'
 import Join from './pages/join'
 import GPSGame from './components/GPSGame'
 import TestLocation from './pages/TestLocation';
+import Olintest from './pages/Olintest'
 
 export default function App() {
     const exampleResults = [
@@ -118,6 +119,7 @@ export default function App() {
             <Route path="/join" element = {<Join/>} />
             <Route path="/gpsgame" element={<GPSGame />} />
             <Route path="/testlocation" element={<TestLocation />} />
+            <Route path="/olintest" element={< Olintest/>} />
 
 
         </Routes>
