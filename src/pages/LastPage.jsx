@@ -16,7 +16,7 @@ const LastPage = () => {
       navigator.geolocation.watchPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          setUserCoords({ lat: latitude, lon: longitude });
+          setUserCoords({ lat: 52.0842391, lon: 5.1756274 });
         },
         (err) => setError("Kan huidige locatie niet ophalen."),
         { enableHighAccuracy: true }
@@ -63,7 +63,7 @@ const LastPage = () => {
   };
 
   const handleNextClick = () => {
-    navigate("/finish"); // Navigeren naar de volgende pagina (pas aan indien nodig)
+    navigate("/Olintest"); // Navigeren naar de volgende pagina (pas aan indien nodig)
   };
 
   if (loading) {

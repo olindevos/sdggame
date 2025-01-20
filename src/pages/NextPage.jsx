@@ -16,7 +16,8 @@ const NextPage = () => {
       navigator.geolocation.watchPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          setUserCoords({ lat: latitude, lon: longitude });
+         // setUserCoords({ lat: latitude, lon: longitude });
+         setUserCoords({ lat: 52.0842458, lon: 5.1756251 });
         },
         (err) => setError("Kan huidige locatie niet ophalen."),
         { enableHighAccuracy: true }

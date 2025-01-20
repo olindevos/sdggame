@@ -11,7 +11,7 @@ export default function Header() {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    };
+    }; 
 
     return (
         <>
